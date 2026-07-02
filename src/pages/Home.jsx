@@ -26,12 +26,12 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-image animate-fade-in delay-300">
-            {/* We use a placeholder that feels premium with glass effect */}
+            {/* 3D Render of musical instruments */}
             <div className="hero-image-wrapper glass">
               <div className="floating-note note-1">🎵</div>
               <div className="floating-note note-2">🎶</div>
               <div className="image-placeholder">
-                <MusicHeroPlaceholder />
+                <img src="/hero-instruments.png" alt="3D Musical Instruments" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
             </div>
           </div>
@@ -169,23 +169,5 @@ export default function Home() {
       </section>
 
     </div>
-  );
-}
-
-// A simple SVG placeholder for the hero image to give a premium feel without needing an actual image file
-function MusicHeroPlaceholder() {
-  return (
-    <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{stopColor: '#6b46c1', stopOpacity: 0.8}} />
-          <stop offset="100%" style={{stopColor: '#0A0F1A', stopOpacity: 1}} />
-        </linearGradient>
-      </defs>
-      <rect width="400" height="400" fill="url(#grad1)" rx="24" />
-      <circle cx="200" cy="200" r="120" fill="none" stroke="rgba(212, 175, 55, 0.3)" strokeWidth="2" />
-      <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(212, 175, 55, 0.1)" strokeWidth="1" />
-      <path d="M185 150 L185 250 L250 200 Z" fill="#D4AF37" />
-    </svg>
   );
 }
