@@ -33,7 +33,13 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -160,16 +166,21 @@ button {
 @media (max-width: 768px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .container { padding: 0 1rem; }
+  
+  /* Make buttons stretch on mobile */
+  .btn { width: 100%; text-align: center; }
+  .btn-outline, .btn-primary { justify-content: center; }
 }
 
 /* Background Gradients */
 .bg-glow {
   position: absolute;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: 600px;
   background: radial-gradient(circle, rgba(107, 70, 193, 0.15) 0%, rgba(10, 15, 26, 0) 70%);
-  top: -200px;
-  right: -200px;
+  top: -100px;
+  right: -100px;
   z-index: -1;
   pointer-events: none;
 }
