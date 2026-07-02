@@ -42,6 +42,12 @@ html {
   width: 100%;
 }
 
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
@@ -175,12 +181,12 @@ button {
 /* Background Gradients */
 .bg-glow {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   max-width: 600px;
   height: 600px;
   background: radial-gradient(circle, rgba(107, 70, 193, 0.15) 0%, rgba(10, 15, 26, 0) 70%);
   top: -100px;
-  right: -100px;
+  right: 0;
   z-index: -1;
   pointer-events: none;
 }
